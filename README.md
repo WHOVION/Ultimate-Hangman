@@ -9,7 +9,7 @@ What I mean by this is not only will you have a max-amount of lives, but also a 
 * CSS
 * Javascript
 
-(https://imgur.com/AUBBqkE.jpeg)
+![wireframe](https://i.imgur.com/AUBBqkE.png)
 
 ### MVP
 
@@ -22,6 +22,7 @@ What I mean by this is not only will you have a max-amount of lives, but also a 
 * Having a functinal 'clear game' button
 * Having the letter that was cliked, if right, display on the word line
 * Display "Winner" or "Loser" message over alphabet board another spot
+* Game will be based on a theme
 
 
 ### Stretch Goals
@@ -31,6 +32,7 @@ What I mean by this is not only will you have a max-amount of lives, but also a 
 * Being able to show each body part of the hangman body
 * If player wants to play a thousand times, having enough words to keep game going
 * Having different modes: Extreme mode would make letters move in different boxes(of course keeping the progress they have)
+* Being able to choose different themes-word relevant to it(themes: movies, word: Avengers)
 
 
 ### Roadblocks
