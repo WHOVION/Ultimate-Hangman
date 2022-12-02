@@ -1,19 +1,36 @@
+/* * {
+    border: 1px solid red;
+    outline: 4px solid black;
+} */
 body {
-    text-align: center;
+    text-align: center;    
 }
 .word {
     border: 5px solid green;
-    margin: 7px auto;
+    margin: 0 auto;
     width: 1580px;
     height: 500px;;
 }
 .keyboard {
     border: 2px solid green;
-    margin: 0 auto;
+    margin: 3px auto;
     width: 1450px;
     height: 250px;
 }
 #reset1 {
     position: relative;
-    right: 900px;
+    margin-right: 1524px;
+    /* right: 770px; */
+    bottom: 100px;
+    font-size: 20px;
+    
 }
+
+/*
+ .button {
+            background-color: yellow;
+            color: black;
+            text-align: center;
+            font-size: 15px;
+         } 
+ */
