@@ -33,6 +33,7 @@ What I mean by this is not only will you have a max-amount of lives, but also a 
 * If player wants to play a thousand times, having enough words to keep game going
 * Having different modes: Extreme mode would make letters move in different boxes(of course keeping the progress they have)
 * Being able to choose different themes-word relevant to it(themes: movies, word: Avengers)
+* How to also allow pressing keyboard keys instead of in-game keyboard
 
 
 ### Roadblocks
