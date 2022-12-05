@@ -1,10 +1,11 @@
 console.log('hello')
 
 // variables
-const resetBtn = document.getElementById('reset')
-const board = document.getElementsByClassName('keyboard')
-let word = document.getElementsByClassName('word')
 
+const resetBtn = document.getElementById('reset')
+const keyboard = document.getElementsByClassName('keyboard')
+let main = document.getElementsByClassName('main')
+// let word = document.getElementsByClassName('word')
 let keys = [
     'a',
     'b',
@@ -33,7 +34,6 @@ let keys = [
     'y',
     'z',
 ]
-
 let countries = [
     'argentina',
     'netherlands',
@@ -53,56 +53,42 @@ let countries = [
     'switzerland',
 ]
 
-// random generator function 
-//function randomCountry() {
-let country = countries[Math.floor(Math.random() * countries.length)]
-//console.log(country)
+// random generator
+//function randomCountry() { // cant be a function because we are not going to be calling it 
 // }
+
+let country = countries[Math.floor(Math.random() * countries.length)]
+    //console.log(country)
 
 // answer function using loop
 
 let answer = [];
 for (let i = 0; i < country.length; i++) {
     answer[i] = '_';
+    // document.getElementsByID('word').innerText = answer[i]
 }
-
-
-const remainingLetters = country.length
+console.log(answer) // DISPLAYS CORRECT
 
 // game loop
+const remainingLetters = country.length
 
-while (remainingLetters > 0) {
-    //console.log(answer.join(' '));
-
-
-// progress funtion 
-
-let guess = prompt("Guess the word");
-    if (guess === null) {
-        break;
-    } else if (guess.length !== 1) {
-        console.log("please insert a single letter")
-    } else {
-        for (let j = 0; j < country.lenght; j++) {
-            if(country[j] === guess) {
-                answer[j] = guess;
-                remainingLetters--;
-            }
-        }
-    }
-}
-
-
-console.log(answer.join(' '));
-console.log("Winner. the word was " + country);
-
-
-
-
-
-
-
-
-
-
-
+    //for (remainingLetters > 0) { // CONSTANT LOOP
+    document.getElementById('word').innerText = answer.join(' ')
+    // console.log(answer.join(' '));
+// // progress funtion 
+// let guess = document.getElementsByClassName.innerText = ("Guess the word");
+//     if (guess === null) {
+//         break;
+//     } else if (guess.length !== 1) {
+//         console.log("please insert a single letter")
+//     } else {
+//         for (let j = 0; j < country.length; j++) {
+//             if(country[j] === guess) {
+//                 answer[j] = guess;
+//                 remainingLetters--;
+//             }
+//         }
+//     }
+// }
+// console.log(answer.join(' '));
+// console.log("Winner. the word was " + country);
