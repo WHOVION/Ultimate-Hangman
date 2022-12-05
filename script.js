@@ -71,24 +71,22 @@ console.log(answer) // DISPLAYS CORRECT
 
 // game loop
 const remainingLetters = country.length
+let message = document.getElementsByClassName('message')
 
-    //for (remainingLetters > 0) { // CONSTANT LOOP
+while(remainingLetters > 0) { // CONSTANT LOOP
     document.getElementById('word').innerText = answer.join(' ')
-    // console.log(answer.join(' '));
-// // progress funtion 
-// let guess = document.getElementsByClassName.innerText = ("Guess the word");
-//     if (guess === null) {
-//         break;
-//     } else if (guess.length !== 1) {
-//         console.log("please insert a single letter")
-//     } else {
-//         for (let j = 0; j < country.length; j++) {
-//             if(country[j] === guess) {
-//                 answer[j] = guess;
-//                 remainingLetters--;
-//             }
-//         }
-//     }
-// }
-// console.log(answer.join(' '));
-// console.log("Winner. the word was " + country);
+    //console.log(answer.join(' '));
+let input = document.getElementsByClassName('input')
+    if (input === null) {
+        break;
+    } else if (input.length !== 1) {
+        message.innerText = 'please insert a single letter'
+    } else {
+        for (let j = 0; j < country.length; j++) {
+            if(country[j] === input) {
+                answer[j] = input;
+                remainingLetters--;
+            }
+        }
+    }
+}
