@@ -73,7 +73,27 @@ console.log(answer) // DISPLAYS CORRECT
 const remainingLetters = country.length
 let message = document.getElementsByClassName('message')
 
-while(remainingLetters > 0) { // CONSTANT LOOP
+// while(remainingLetters > 0) { // CONSTANT LOOP
+//     // join returns an array as a string
+    //document.getElementById('word').innerText = answer.join(' ')
+    //console.log(answer.join(' '));
+// let input = document.getElementsByClassName('input')
+//     if (input === null) {
+//         break;
+//     } else if (input.length !== 1) {
+//         message.innerText = 'please insert a single letter'
+//     } else {
+//         for (let j = 0; j < country.length; j++) {
+//             if(country[j] === input) {
+//                 answer[j] = input;
+//                 remainingLetters--;
+//             }
+//         }
+//     }
+// }
+
+for (let i = remainingLetters; i > 0; i--) {
+    //     // join returns an array as a string
     document.getElementById('word').innerText = answer.join(' ')
     //console.log(answer.join(' '));
 let input = document.getElementsByClassName('input')
@@ -90,3 +110,5 @@ let input = document.getElementsByClassName('input')
         }
     }
 }
+
+

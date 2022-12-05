@@ -31,7 +31,12 @@ body {
     bottom: 100px;
     font-size: 20px;
 }
-
+.keys {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px auto;
+    flex-wrap: wrap;
+}
 /*
 .button {
     background-color: yellow;
