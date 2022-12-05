@@ -57,16 +57,43 @@ let countries = [
 // random generator function 
 
 function randomCountry() {
-const countryAns = countries[Math.floor(Math.random() * countries.length)];
-//console.log(countryAns)
+const country = countries[Math.floor(Math.random() * countries.length)];
+//console.log(country)
 }
-//console.log(countryAns)
 
-// keyboard function 
+// answer function using loop
 
-function keyboard() {
-    <button
+let answer = [];
+for (let i = 0; i < country.length; i++) {
+    answer[i] = '_';
 }
+const remainingLetters = country.length
+
+// game loop
+
+while (remainingLetters > 0) {
+    console.log(answer.join(' '));
+
+
+// progress funtion 
+
+let guess = prompt("Guess the word");
+if (guess === null) {
+    break;
+} else if (guess.length !== 1) {
+    console.log("please insert a single letter")
+} else {
+    for (let j = 0; j < country.lenght; j++) {
+        if(country[j] === guess) {
+            answer[j] = guess;
+            remainingLetters--;
+        }
+    }
+}
+}
+console.log(answer.join(' '));
+console.log("Winner. the word was" + country);
+
 
 
 
