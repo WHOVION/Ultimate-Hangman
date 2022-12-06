@@ -2,9 +2,12 @@ console.log('hello')
 
 // variables
 
-const resetBtn = document.getElementById('reset')
-const keyboard = document.getElementsByClassName('keyboard')
-let main = document.getElementsByClassName('main')
+// const resetBtn = document.getElementById('reset')
+// const keyboard = document.getElementsByClassName('keyboard')
+// let main = document.getElementsByClassName('main')
+// let mistakes = document.getElementById('#mistakes')
+// let mistakes = 6
+
 // let word = document.getElementsByClassName('word')
 // let keys = [
 //     'a',
@@ -57,21 +60,21 @@ let countries = [
 //function randomCountry() { // cant be a function because we are not going to be calling it 
 // }
 
-let country = countries[Math.floor(Math.random() * countries.length)]
-    //console.log(country)
-let countryArr = country.split("")
+// let country = countries[Math.floor(Math.random() * countries.length)]
+//     //console.log(country)
+// let countryArr = country.split("")
 // answer function using loop
 
-let placeholder = [];
-for (let i = 0; i < country.length; i++) {
-    placeholder[i] = '_';
+// let placeholder = [];
+// for (let i = 0; i < country.length; i++) {
+//     placeholder[i] = '_';
     // document.getElementsByID('word').innerText = answer[i]
-}
+//}
 //console.log(answer) // DISPLAYS CORRECT
 
 // game loop
-const remainingLetters = country.length
-let message = document.getElementsByClassName('message')
+// const remainingLetters = country.length
+// let message = document.getElementsByClassName('message')
 
 // while(remainingLetters > 0) { // CONSTANT LOOP
 //     // join returns an array as a string
@@ -94,7 +97,7 @@ let message = document.getElementsByClassName('message')
 
 // for (let i = remainingLetters; i > 0; i--) {
     //     // join returns an array as a string
-    document.getElementById('word').innerText = placeholder.join(' ')
+     //document.getElementById('word').innerText = placeholder.join(' ')
     //console.log(answer.join(' '));
 //     let input = document.getElementsByClassName('input')
 //     if (input === null) {
@@ -112,21 +115,23 @@ let message = document.getElementsByClassName('message')
 // }
 
 
-const keys = document.querySelectorAll('.keys')
-//console.log(keys.length)
-for (let i = 0; i < keys.length; i++) {
-    //console.log(keys[i].innerText)
-    keys[i].addEventListener('click', function(e) {
-        console.log(e.target.innerText)
-        const wordIDX = country.indexOf(e.target.innerText)
-            if(wordIDX >= 0) {
-                placeholder[wordIDX] = e.target.innerText
-                document.getElementById('word').innerText = placeholder.join(' ')
-        } else {
-            
-        }
-    })
-}
+// const keys = document.querySelectorAll('.keys')
+// //console.log(keys.length)
+// for (let i = 0; i < keys.length; i++) {
+//     //console.log(keys[i].innerText)
+//     keys[i].addEventListener('click', function(e) {
+//         console.log(e.target.innerText)
+//         const wordIDX = country.indexOf(e.target.innerText)
+//             if(wordIDX >= 0) {
+//                 placeholder[wordIDX] = e.target.innerText
+//                 document.getElementById('word').innerText = placeholder.join(' ')
+//         } if (placeholder[] === country) {
+//         } else {
+//             mistakes--;
+//             document.getElementById('mistakes').innerText = mistakes--;
+//         }
+//     })
+// }
 
 
 // when key is clicked
@@ -137,6 +142,56 @@ for (let i = 0; i < keys.length; i++) {
 
 
 // (event.target.innerText)
+const resetBtn = document.getElementById('reset')
+const keyboard = document.getElementsByClassName('keyboard')
+let main = document.getElementsByClassName('main')
+
+let mistakes = 6
+
+
+
+let country = countries[Math.floor(Math.random() * countries.length)]
+let countryArr = country.split("")
+
+
+let placeholder = [];
+for (let i = 0; i < country.length; i++) {
+    placeholder[i] = '_';
+}
+
+
+const remainingLetters = country.length
+const message = document.querySelector('.message')
+
+
+document.getElementById('word').innerText = placeholder.join(' ')
+
+
+const keys = document.querySelectorAll('.keys')
+ 
+//console.log(keys.length)
+for (let i = 0; i < keys.length; i++) {
+    //console.log(keys[i].innerText)
+    keys[i].addEventListener('click', function(e) {
+        console.log(e.target.innerText)
+        const wordIDX = country.indexOf(e.target.innerText)
+            if(wordIDX >= 0) {
+                placeholder[wordIDX] = e.target.innerText
+                document.getElementById('word').innerText = placeholder.join(' ')
+            } else {
+                mistakes--;
+                document.getElementById('mistakes').innerText = mistakes;
+                if(mistakes <= 0) {
+                    console.log('loser')
+                    message.innerText = 'YOU NEED TO GO BACK TO GEOGRAPHY CLASS'
+                }
+            } if (placeholder.join(' ') === country) {
+                message.innerText = 'WINNER WINNER CHICKEN DINNER'
+            }
+        })
+}
+
+
 
 
 
