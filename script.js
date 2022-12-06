@@ -6,34 +6,34 @@ const resetBtn = document.getElementById('reset')
 const keyboard = document.getElementsByClassName('keyboard')
 let main = document.getElementsByClassName('main')
 // let word = document.getElementsByClassName('word')
-let keys = [
-    'a',
-    'b',
-    'c',
-    'd',
-    'e',
-    'f',
-    'g',
-    'h',
-    'i',
-    'j',
-    'k',
-    'l',
-    'm',
-    'n',
-    'o',
-    'p',
-    'q',
-    'r',
-    's', 
-    't', 
-    'u',
-    'v',
-    'w',
-    'x',
-    'y',
-    'z',
-]
+// let keys = [
+//     'a',
+//     'b',
+//     'c',
+//     'd',
+//     'e',
+//     'f',
+//     'g',
+//     'h',
+//     'i',
+//     'j',
+//     'k',
+//     'l',
+//     'm',
+//     'n',
+//     'o',
+//     'p',
+//     'q',
+//     'r',
+//     's', 
+//     't', 
+//     'u',
+//     'v',
+//     'w',
+//     'x',
+//     'y',
+//     'z',
+// ]
 let countries = [
     'argentina',
     'netherlands',
@@ -110,5 +110,19 @@ let input = document.getElementsByClassName('input')
         }
     }
 }
+
+
+const keys = document.querySelectorAll('.keys')
+console.log(keys.length)
+
+for (let i = 0; i < keys.length; i++) {
+    console.log("taco", keys[i].innerText)
+    keys[i].addEventListener('click', function() {
+        console.log(keys[i].innerText)
+    })
+}
+
+
+// (event.target.innerText)
 
 
