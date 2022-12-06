@@ -142,55 +142,70 @@ let countries = [
 
 
 // (event.target.innerText)
-const resetBtn = document.getElementById('reset')
+const reset = document.getElementById('reset')
 const keyboard = document.getElementsByClassName('keyboard')
 let main = document.getElementsByClassName('main')
-
 let mistakes = 6
 
+//function wordMaker() {
+    let country = countries[Math.floor(Math.random() * countries.length)]
+    let countryArr = country.split("")
+    console.log(country)
+//}
 
-
-let country = countries[Math.floor(Math.random() * countries.length)]
-let countryArr = country.split("")
-
-
-let placeholder = [];
-for (let i = 0; i < country.length; i++) {
-    placeholder[i] = '_';
-}
+//function createsLines() {
+    let placeholder = [];
+    for (let i = 0; i < country.length; i++) {
+        placeholder[i] = '_';
+    }
+//}
 
 
 const remainingLetters = country.length
 const message = document.querySelector('.message')
-
-
 document.getElementById('word').innerText = placeholder.join(' ')
-
-
 const keys = document.querySelectorAll('.keys')
- 
-//console.log(keys.length)
-for (let i = 0; i < keys.length; i++) {
-    //console.log(keys[i].innerText)
-    keys[i].addEventListener('click', function(e) {
-        console.log(e.target.innerText)
-        const wordIDX = country.indexOf(e.target.innerText)
-            if(wordIDX >= 0) {
-                placeholder[wordIDX] = e.target.innerText
-                document.getElementById('word').innerText = placeholder.join(' ')
-            } else {
-                mistakes--;
-                document.getElementById('mistakes').innerText = mistakes;
-                if(mistakes <= 0) {
-                    console.log('loser')
-                    message.innerText = 'YOU NEED TO GO BACK TO GEOGRAPHY CLASS'
-                }
-            } if (placeholder.join(' ') === country) {
-                message.innerText = 'WINNER WINNER CHICKEN DINNER'
-            }
-        })
-}
+ //console.log(keys.length)
 
+
+//function mainGame() {
+    for (let i = 0; i < keys.length; i++) {
+    //console.log(keys[i].innerText)
+        keys[i].addEventListener('click', function(e) {
+            setInterval
+            console.log(e.target.innerText)
+            const wordIDX = country.indexOf(e.target.innerText)
+                if(wordIDX >= 0) {
+                    placeholder[wordIDX] = e.target.innerText
+                    document.getElementById('word').innerText = placeholder.join(' ')
+                } else {
+                    mistakes--;
+                    document.getElementById('mistakes').innerText = mistakes;
+                    if(mistakes <= 0) {
+                        //console.log('loser')
+                        message.innerText = 'YOU NEED TO GO BACK TO GEOGRAPHY CLASS'
+                    }
+                } if (placeholder.join(' ') === country) {
+                message.innerText = 'WINNER WINNER CHICKEN DINNER'
+                }
+            })
+    }
+//}
+
+// function resetBtn() {
+//     document.getElementsByTagName('body') = reset() 
+        // wordMaker()
+        // createLines
+        // mainGame()
+// }
+
+
+// if word is complete, add message to main box
+// lives is done, add message to whole main box
+// deactivate buttons after clicked
+// link images to mistakes
+// reset button
+// BUG: why can't the same word get placed twice
 
 
 
