@@ -59,12 +59,12 @@ let countries = [
 
 let country = countries[Math.floor(Math.random() * countries.length)]
     //console.log(country)
-
+let countryArr = country.split("")
 // answer function using loop
 
-let answer = [];
+let placeholder = [];
 for (let i = 0; i < country.length; i++) {
-    answer[i] = '_';
+    placeholder[i] = '_';
     // document.getElementsByID('word').innerText = answer[i]
 }
 //console.log(answer) // DISPLAYS CORRECT
@@ -92,34 +92,38 @@ let message = document.getElementsByClassName('message')
 //     }
 // }
 
-for (let i = remainingLetters; i > 0; i--) {
+// for (let i = remainingLetters; i > 0; i--) {
     //     // join returns an array as a string
-    document.getElementById('word').innerText = answer.join(' ')
+    document.getElementById('word').innerText = placeholder.join(' ')
     //console.log(answer.join(' '));
-    let input = document.getElementsByClassName('input')
-    if (input === null) {
-        break;
-    } else if (input.length !== 1) {
-        message.innerText = 'please insert a single letter'
-    } else {
-        for (let j = 0; j < country.length; j++) {
-            if(country[j] === input) {
-                answer[j] = input;
-                remainingLetters--;
-            }
-        }
-    }
-}
+//     let input = document.getElementsByClassName('input')
+//     if (input === null) {
+//         break;
+//     } else if (input.length !== 1) {
+//         message.innerText = 'please insert a single letter'
+//     } else {
+//         for (let j = 0; j < country.length; j++) {
+//             if(country[j] === input) {
+//                 placeholder[j] = input;
+//                 remainingLetters--;
+//             }
+//         }
+//     }
+// }
 
 
 const keys = document.querySelectorAll('.keys')
 //console.log(keys.length)
 for (let i = 0; i < keys.length; i++) {
     //console.log(keys[i].innerText)
-    keys[i].addEventListener('click', function() {
-        console.log(keys[i].innerText)
-        if(click.target.innerText === answer) {
-        
+    keys[i].addEventListener('click', function(e) {
+        console.log(e.target.innerText)
+        const wordIDX = country.indexOf(e.target.innerText)
+            if(wordIDX >= 0) {
+                placeholder[wordIDX] = e.target.innerText
+                document.getElementById('word').innerText = placeholder.join(' ')
+        } else {
+            
         }
     })
 }
@@ -133,5 +137,6 @@ for (let i = 0; i < keys.length; i++) {
 
 
 // (event.target.innerText)
+
 
 
