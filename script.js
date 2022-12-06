@@ -67,7 +67,7 @@ for (let i = 0; i < country.length; i++) {
     answer[i] = '_';
     // document.getElementsByID('word').innerText = answer[i]
 }
-console.log(answer) // DISPLAYS CORRECT
+//console.log(answer) // DISPLAYS CORRECT
 
 // game loop
 const remainingLetters = country.length
@@ -96,7 +96,7 @@ for (let i = remainingLetters; i > 0; i--) {
     //     // join returns an array as a string
     document.getElementById('word').innerText = answer.join(' ')
     //console.log(answer.join(' '));
-let input = document.getElementsByClassName('input')
+    let input = document.getElementsByClassName('input')
     if (input === null) {
         break;
     } else if (input.length !== 1) {
@@ -113,14 +113,23 @@ let input = document.getElementsByClassName('input')
 
 
 const keys = document.querySelectorAll('.keys')
-console.log(keys.length)
-
+//console.log(keys.length)
 for (let i = 0; i < keys.length; i++) {
-    console.log("taco", keys[i].innerText)
+    //console.log(keys[i].innerText)
     keys[i].addEventListener('click', function() {
         console.log(keys[i].innerText)
+        if(click.target.innerText === answer) {
+        
+        }
     })
 }
+
+
+// when key is clicked
+// check if it's word
+// if yes (display word) while also making sure key cant be pressed again
+// if not in word, make sure key cant be pressed again and display image while also adding reducing(or adding) a life to the max amount of lives
+
 
 
 // (event.target.innerText)
