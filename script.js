@@ -146,13 +146,8 @@ const reset = document.getElementById('reset')
 const keyboard = document.getElementsByClassName('keyboard')
 const container = document.getElementById('cotainer')
 const word = document.getElementById('word')
-let remainingLetters = country.length
-const message = document.querySelector('.message')
-word.innerText = placeholder.join(' ')
-const timer = document.querySelector('timer')
-let countdown;
-const keys = document.querySelectorAll('.keys')
- //console.log(keys.length)
+const countdown = document.querySelector('#timer')
+let timer;
 let mistakes = 6
 
  
@@ -167,6 +162,12 @@ let mistakes = 6
         placeholder[i] = '_';
     }
     //console.log(placeholder)
+
+    let remainingLetters = country.length
+const message = document.querySelector('.message')
+word.innerText = placeholder.join(' ')
+let keys = document.querySelectorAll('.keys')
+ //console.log(keys.length)
 
 
     for (let i = 0; i < keys.length; i++) {
@@ -198,14 +199,16 @@ let mistakes = 6
             })
     }
 
-
     (function(){
         let sec = 20
-        countdown = setInterval(()=>{
-            timer.innerHTML = ('20' + sec);
-        })
-    })
-    
+        timer = setInterval(() => {
+            countdown.innerHTML = sec;
+            sec--;
+            if (sec < 0) {
+                clearInterval(timer)
+            }
+        }, 1000)
+    })()
 
 
 
