@@ -38,22 +38,22 @@ console.log('hello')
 //     'z',
 // ]
 let countries = [
-    'argentina',
-    'netherlands',
+    // 'argentina',
+    // 'netherlands',
     'usa',
-    'australia',
+    // 'australia',
     'japan',
-    'croatia',
-    'brazil',
-    'south korea',
-    'france',
-    'poland',
-    'england',
-    'senegal',
-    'morocco',
-    'spain',
-    'portugal',
-    'switzerland',
+    // 'croatia',
+    //'brazil',
+    // 'south korea',
+    // 'france',
+    // 'poland',
+    // 'england',
+    // 'senegal',
+    // 'morocco',
+    // 'spain',
+    // 'portugal',
+    // 'switzerland',
 ]
 
 // random generator
@@ -144,12 +144,13 @@ let countries = [
 // (event.target.innerText)
 const reset = document.getElementById('reset')
 const keyboard = document.getElementsByClassName('keyboard')
-let main = document.getElementsByClassName('main')
+const container = document.getElementById('cotainer')
+const word = document.getElementById('word')
 let mistakes = 6
 
 //function wordMaker() {
     let country = countries[Math.floor(Math.random() * countries.length)]
-    let countryArr = country.split("")
+    country = country.split("")
     console.log(country)
 //}
 
@@ -158,12 +159,13 @@ let mistakes = 6
     for (let i = 0; i < country.length; i++) {
         placeholder[i] = '_';
     }
+    //console.log(placeholder)
 //}
 
 
-const remainingLetters = country.length
+let remainingLetters = country.length
 const message = document.querySelector('.message')
-document.getElementById('word').innerText = placeholder.join(' ')
+word.innerText = placeholder.join(' ')
 const keys = document.querySelectorAll('.keys')
  //console.log(keys.length)
 
@@ -172,25 +174,35 @@ const keys = document.querySelectorAll('.keys')
     for (let i = 0; i < keys.length; i++) {
     //console.log(keys[i].innerText)
         keys[i].addEventListener('click', function(e) {
-            setInterval
-            console.log(e.target.innerText)
-            const wordIDX = country.indexOf(e.target.innerText)
-                if(wordIDX >= 0) {
-                    placeholder[wordIDX] = e.target.innerText
-                    document.getElementById('word').innerText = placeholder.join(' ')
-                } else {
-                    mistakes--;
-                    document.getElementById('mistakes').innerText = mistakes;
-                    if(mistakes <= 0) {
-                        //console.log('loser')
-                        message.innerText = 'YOU NEED TO GO BACK TO GEOGRAPHY CLASS'
-                    }
-                } if (placeholder.join(' ') === country) {
-                message.innerText = 'WINNER WINNER CHICKEN DINNER'
+            //setInterval
+            //console.log(e.target.innerText)
+            let matched = false;
+            for (let i = 0; i < country.length; i++) {
+                if (e.target.innerText === country[i]) {
+                    placeholder[i] = e.target.innerText
+                    matched = true;
+                    word.innerText = placeholder.join(' ')
+                    // subtract remainingLetters
+                    remainingLetters--;
+                    console.log(remainingLetters)
+                }
+            }
+            if (!matched) {
+                mistakes--;
+                document.getElementById('mistakes').innerText = mistakes;
+                if(mistakes <= 0) {
+                    //console.log('loser')
+                    message.innerText = 'YOU NEED TO GO BACK TO GEOGRAPHY CLASS'
+                }
+            }
+                 if (remainingLetters === 0) {
+                    //container.style = clear
+                    message.innerText = 'WINNER WINNER CHICKEN DINNER'
                 }
             })
     }
 //}
+
 
 // function resetBtn() {
 //     document.getElementsByTagName('body') = reset() 
@@ -205,7 +217,12 @@ const keys = document.querySelectorAll('.keys')
 // deactivate buttons after clicked
 // link images to mistakes
 // reset button
+// make active timer
+
+// ?
 // BUG: why can't the same word get placed twice
+// how does positioning work again, when I make top bigger everything goes down or right side of main bigger, word goes lower
+
 
 
 

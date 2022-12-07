@@ -9,6 +9,7 @@
         <script src="./script.js" defer></script>
     </head>
     <body>
+        <!-- <img src="https://ibb.co/SvqTBkn.jpg" /> -->
         <section>
         <div class="top">
             <h1>Ultimate Hangman</h1>
@@ -20,10 +21,10 @@
             <button type="reset" value="Reset" id="reset"'>Reset</button>
         </div>
         </section>
-        <section class="container">
+        <section id="container">
             <div class="main">
                 <div class="message"></div>
-                <div class="timer">20</div>
+                <div id="timer">20</div>
                 <div class="lives"> <span id="mistakes">6</span> tries left</div>
                 <div id="word"></div>
             </div>
@@ -32,6 +33,7 @@
             <div id="keyboard">
                 <!-- <input type="text" class="input"/>
                 <button class="input" type="submit">submit</button> -->
+                <div class="firstRow">
                     <button class="keys" type="submit">a</button>
                     <button class="keys" type="submit">b</button>
                     <button class="keys" type="submit">c</button>
@@ -44,6 +46,8 @@
                     <button class="keys" type="submit">j</button>
                     <button class="keys" type="submit">k</button>
                     <button class="keys" type="submit">l</button>
+                </div>
+                <div class="secondRow">
                     <button class="keys" type="submit">m</button>
                     <button class="keys" type="submit">n</button>
                     <button class="keys" type="submit">o</button>
@@ -52,12 +56,15 @@
                     <button class="keys" type="submit">r</button>
                     <button class="keys" type="submit">s</button>
                     <button class="keys" type="submit">t</button>
+                </div>
+                <div class="lastRow">
                     <button class="keys" type="submit">u</button>
                     <button class="keys" type="submit">v</button>
                     <button class="keys" type="submit">w</button>
                     <button class="keys" type="submit">x</button>
                     <button class="keys" type="submit">y</button>
                     <button class="keys" type="submit">z</button>
+                </div>
             </div>
         </section>
     </body>
