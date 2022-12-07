@@ -146,31 +146,29 @@ const reset = document.getElementById('reset')
 const keyboard = document.getElementsByClassName('keyboard')
 const container = document.getElementById('cotainer')
 const word = document.getElementById('word')
+let remainingLetters = country.length
+const message = document.querySelector('.message')
+word.innerText = placeholder.join(' ')
+const timer = document.querySelector('timer')
+let countdown;
+const keys = document.querySelectorAll('.keys')
+ //console.log(keys.length)
 let mistakes = 6
 
-//function wordMaker() {
+ 
     let country = countries[Math.floor(Math.random() * countries.length)]
-    country = country.split("")
     console.log(country)
-//}
+    country = country.split("")
 
-//function createsLines() {
+
+
     let placeholder = [];
     for (let i = 0; i < country.length; i++) {
         placeholder[i] = '_';
     }
     //console.log(placeholder)
-//}
 
 
-let remainingLetters = country.length
-const message = document.querySelector('.message')
-word.innerText = placeholder.join(' ')
-const keys = document.querySelectorAll('.keys')
- //console.log(keys.length)
-
-
-//function mainGame() {
     for (let i = 0; i < keys.length; i++) {
     //console.log(keys[i].innerText)
         keys[i].addEventListener('click', function(e) {
@@ -186,42 +184,53 @@ const keys = document.querySelectorAll('.keys')
                     remainingLetters--;
                     console.log(remainingLetters)
                 }
-            }
-            if (!matched) {
+            } if (!matched) {
                 mistakes--;
                 document.getElementById('mistakes').innerText = mistakes;
                 if(mistakes <= 0) {
                     //console.log('loser')
                     message.innerText = 'YOU NEED TO GO BACK TO GEOGRAPHY CLASS'
                 }
-            }
-                 if (remainingLetters === 0) {
+            }  if (remainingLetters === 0) {
                     //container.style = clear
                     message.innerText = 'WINNER WINNER CHICKEN DINNER'
                 }
             })
     }
-//}
 
 
-// function resetBtn() {
-//     document.getElementsByTagName('body') = reset() 
-        // wordMaker()
-        // createLines
-        // mainGame()
-// }
+    (function(){
+        let sec = 20
+        countdown = setInterval(()=>{
+            timer.innerHTML = ('20' + sec);
+        })
+    })
+    
+
+
+
+
+
+
+    // reset.addEventListener('click', function(e) {
+    //     keys.default
+    // })
+
+    // function resetBtn(e) {
+    //     reset.addEventListener('click', )
+    // }
+
+
 
 
 // if word is complete, add message to main box
 // lives is done, add message to whole main box
-// deactivate buttons after clicked
 // link images to mistakes
-// reset button
 // make active timer
 
 // ?
-// BUG: why can't the same word get placed twice
-// how does positioning work again, when I make top bigger everything goes down or right side of main bigger, word goes lower
+// reset button
+
 
 
 
