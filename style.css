@@ -3,7 +3,8 @@
     outline: 4px solid black;
 } */
 body {
-    text-align: center;   
+    text-align: center;
+    background-color: rgb(234, 233, 233);
 }
 h1 {
     position: relative;
