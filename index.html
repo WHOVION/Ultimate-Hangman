@@ -14,15 +14,15 @@
             <h1>Ultimate Hangman</h1>
             <h3>--Themes(More Coming Soon...)--</h3>
             <div class="radios"> 
-                <input type="radio" name="countries" value="countries" checked="checked" />
-                <label for="countries">Countries</label> 
+                <input id="radio" type="radio" name="countries" value="countries" checked="checked" />
+                <label id="radio" for="countries">Countries</label> 
             </div>
             <button type="reset" value="Reset" id="reset"'>Reset</button>
         </div>
         </section>
         <div id="hiddenContainer">
             <div id="timer">20</div>
-            <div class="lives"> <span id="mistakes">6</span> tries left</div>
+            <div class="lives"> <span id="mistakes">6</span> Tries Left</div>
             </div>
         <section id="container">
             <div class="main">
@@ -40,7 +40,7 @@
                 <div id="word"></div>
             </div>
         </section>
-        <section>
+        <section id="keyBorder">
             <div id="keyboard">
                 <div class="firstRow">
                     <button class="keys" type="submit">E</button>
@@ -79,7 +79,7 @@
     </body>
     </html>
 
-    
+
 
     
 
