@@ -74,7 +74,7 @@ h3 {
  .img2 {
     margin-top: 10px;
     height: 350px;
-    display: none;
+    /* display: none; */
 }
  .img3 {
     margin-top: 10px;
@@ -84,22 +84,22 @@ h3 {
  .img4 {
     margin-top: 10px;
     height: 350px;
-    display: none;
+    /* display: none; */
 }
  .img5 {
     margin-top: 10px;
     height: 350px;
-    display: none;
+    /* display: none; */
 }
  .img6 {
     margin-top: 10px;
     height: 350px;
-    display: none;
+    /* display: none; */
 }
  .winner {
     margin-top: 10px;
     height: 350px;
-    display: none;
+    /* display: none; */
 }
 
 .hidden {
