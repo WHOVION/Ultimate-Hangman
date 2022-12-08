@@ -1,7 +1,6 @@
 ## Ultimate Hangman
 
-* Ultimate Hangman is not your typical hangman game. Ultimate Hangman test not only your Vocabulary skills, but also your Under-Pressure skills as well. 
-What I mean by this is not only will you have a max-amount of lives, but also a timer and if you lose all your lives or the timer runs out, YOU LOSE.
+* Ultimate Hangman is not your typical hangman game. Ultimate Hangman test not only your knowledge, but also your Under-Pressured skills as well. Now you may be asking how a childs game like hangman puts you under pressure. In normal hangman, the only goal is to guess the word with a a max-amount of tries. Ultimate hangman also has a max amount of tries but also a timer running down once you first click a letter and if you lose all your lives or the timer runs out, YOU LOSE. Think its easy, give it a TRY.
 
 ### Tech being used
 
@@ -19,9 +18,9 @@ What I mean by this is not only will you have a max-amount of lives, but also a 
 * Making the correct words that are clicked green
 * Making the wrong answers that are clicked red
 * Making sure once the letter is clicked it can't be clicked again
-* Having a functinal 'clear game' button
+* Having a functinal 'reset' button
 * Having the letter that was cliked, if right, display on the word line
-* Display "Winner" or "Loser" message over alphabet board another spot
+* Display "Winner" or "Loser" message over alphabet board or another spot
 * Game will be based on a theme
 
 
