@@ -9,7 +9,7 @@ let countries = [
     'japan',
     // 'croatia',
     //'brazil',
-    // 'south korea',
+    // 'southkorea',
     // 'france',
     // 'poland',
     // 'england',
@@ -21,9 +21,7 @@ let countries = [
 ]
 
 
-// (event.target.innerText)
 const reset = document.getElementById('reset')
-const keyboard = document.getElementsByClassName('keyboard')
 const container = document.getElementById('cotainer')
 const word = document.getElementById('word')
 const timeDisplay = document.querySelector('#timer')
@@ -47,14 +45,20 @@ let sec = 20
     const message = document.querySelector('.message')
     word.innerText = placeholder.join(' ')
     let keys = document.querySelectorAll('.keys')
+    let gameRunning = false
     //console.log(keys.length)
 
 
     for (let i = 0; i < keys.length; i++) {
     //console.log(keys[i].innerText)
         keys[i].addEventListener('click', function(e) {
+            if (!gameRunning) {
+                timer()
+                gameRunning = true
+            }
             //console.log(e.target.innerText)
             //timer()
+            e.currentTarget.disabled = true
             let matched = false;
             for (let i = 0; i < country.length; i++) {
                 if (e.target.innerText === country[i]) {
@@ -102,15 +106,17 @@ let sec = 20
                 if(mistakes <= 0) {
                     //console.log('loser')
                     message.innerText = 'YOU NEED TO GO BACK TO GEOGRAPHY CLASS'
-                    //disable.keys
+                    //disable.keys 
+                    clearInterval(timer)
                 }
             } if (remainingLetters === 0) {
                     //container.style = clear
                     message.innerText = 'WINNER WINNER CHICKEN DINNER'
                     document.getElementById('test0').classList.add('hidden')
                     document.getElementById('winningPic').classList.remove('hidden')
+                    clearInterval(timer)
+                    disKey()
                 }
-                timer()
             })
     }
 
@@ -127,12 +133,15 @@ let sec = 20
         }, 1000)
     }
 
-
-    function stopEv() {
-        stoptimer()
+    function disKey() {
+        keys.forEach(key => {
+            key.disabled = true
+        })
     }
 
+
     function resetGame() {
+        clearInterval(timer)
         mistakes = 6
         sec = 20    
         document.getElementById('timer').innerText = sec;
@@ -145,13 +154,10 @@ let sec = 20
         document.getElementById('test2').classList.add('hidden')
         document.getElementById('test1').classList.add('hidden')
         document.getElementById('test0').style.display = 'inline-block'
-        // document.getElementById('keyboard').disabled = true
-        document.getElementById('keyboard').onclick='this.disabled = true'
-
-
-        // country = countries[Math.floor(Math.random() * countries.length)]
-        // reset all global variables
-        // buttons undisable
+        keys.forEach(key => {
+            key.disabled = false
+        })
+        gameRunning = false
         console.log('clicked')
     }
 
@@ -162,15 +168,11 @@ let sec = 20
     })
 
    
-    
-
-
-
 
 
 // ?
-// reset button for word and buttons
-//reset all buttons when win or lose
+// reset button for word 
+// disable buttons when win or lose
 
 
 
