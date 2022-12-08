@@ -42,7 +42,7 @@ const container = document.getElementById('container')
 let word = document.getElementById('word')
 const timeDisplay = document.querySelector('#timer')
 let mistakes = 6
-let sec = 20
+let sec = 15
 
 
 
@@ -59,7 +59,7 @@ let sec = 20
 
 
     let remainingLetters = country.length
-    const message = document.querySelector('.message')
+    let message = document.querySelector('.message')
     word.innerText = placeholder.join(' ')
     let keys = document.querySelectorAll('.keys')
     let gameRunning = false
@@ -86,11 +86,10 @@ let sec = 20
                     switch (mistakes) {
                     case 5:
                         console.log('mistakes')
-                        document.getElementById('test0').style.display = 'none'
+                        document.getElementById('test0').classList.add('hidden')
                         document.getElementById('test1').classList.remove('hidden')
                       break;
                     case 4:
-                    document.getElementById('test0').classList.add('hidden')
                     document.getElementById('test1').classList.add('hidden')
                     document.getElementById('test2').classList.remove('hidden')
                     break;
@@ -139,7 +138,7 @@ let sec = 20
 
 
     function timer() {
-        let sec = 20
+        let sec = 15
         activeTimer = setInterval(() => {
             timeDisplay.innerHTML = sec;
             sec--;
@@ -179,19 +178,19 @@ let sec = 20
 
     function resetGame() {
         resetWord()
+        message.innerText = ''
         clearTimeout(activeTimer) 
-        mistakes = 6
+        mistakes = 5
         document.getElementById('timer').innerText = sec;
         document.getElementById('mistakes').innerText = mistakes;
         document.getElementById('test0').classList.remove('hidden')
-        document.getElementById('test0').style.display = 'inline-block'
-        document.getElementById('test1').classList.remove('hidden')
-        // document.getElementById('test2').classList.add('hidden')
-        // document.getElementById('test3').classList.add('hidden')
-        // document.getElementById('test4').classList.add('hidden')
-        // document.getElementById('test5').classList.add('hidden')
-        // document.getElementById('test6').classList.add('hidden')
-        // document.getElementById('winningPic').classList.add('hidden')
+        document.getElementById('test1').classList.add('hidden')
+        document.getElementById('test2').classList.add('hidden')
+        document.getElementById('test3').classList.add('hidden')
+        document.getElementById('test4').classList.add('hidden')
+        document.getElementById('test5').classList.add('hidden')
+        document.getElementById('test6').classList.add('hidden')
+        document.getElementById('winningPic').classList.add('hidden')
         keys.forEach(key => {
             key.disabled = false
         })
@@ -199,16 +198,9 @@ let sec = 20
     }
 
     reset.addEventListener('click', function(e) {
-        resetGame()
+        resetGame();
     })
 
-
-
-   
-
-
-// ?
-// reset button for word 
 
 
 
