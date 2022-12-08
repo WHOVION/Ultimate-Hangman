@@ -2,45 +2,61 @@ console.log('hello')
 
 // variables
 let countries = [
-    // 'argentina',
-    // 'netherlands',
-    'usa',
-    // 'australia',
-    'japan',
-    // 'croatia',
-    //'brazil',
-    // 'southkorea',
-    // 'france',
-    // 'poland',
-    // 'england',
-    // 'senegal',
-    // 'morocco',
-    // 'spain',
-    // 'portugal',
-    // 'switzerland',
+    'ARGENTINA',
+    'NETHERLANDS',
+    'USA',
+    'AUSTRALIA',
+    'JAPAN',
+    'CROATIA',
+    'BRAZIL',
+    'SOUTHKOREA',
+    'FRANCE',
+    'POLAND',
+    'ENGLAND',
+    'SENEGAL',
+    'MOROCCO',
+    'SPAIN',
+    'PORTUGAL',
+    'SWITZERLAND',
+    'QUATAR',
+    'ECUADOR',
+    'IRAN',
+    'WALES',
+    'MEXICO',
+    'SAUDIARABIA',
+    'TUNISIA',
+    'DENMARK',
+    'GERMANY',
+    'COSTARICA',
+    'BELGIUM',
+    'CANADA',
+    'CAMEROON',
+    'SERBIA',
+    'URUGUAY',
+    'GHANA'
 ]
 
 
 const reset = document.getElementById('reset')
 const container = document.getElementById('cotainer')
-const word = document.getElementById('word')
+let word = document.getElementById('word')
 const timeDisplay = document.querySelector('#timer')
 let mistakes = 6
 let sec = 20
-let timeVar = null
 
- 
+
+
     let country = countries[Math.floor(Math.random() * countries.length)]
     console.log(country)
     country = country.split("")
-
+    
 
 
     let placeholder = [];
     for (let i = 0; i < country.length; i++) {
         placeholder[i] = '_';
     }
-    
+
 
     let remainingLetters = country.length
     const message = document.querySelector('.message')
@@ -141,11 +157,24 @@ let timeVar = null
         })
     }
 
+    function resetWord() {
+        let country = countries[Math.floor(Math.random() * countries.length)]
+        console.log(country)
+        country = country.split("")
+
+    
+        let placeholder = [];
+        for (let i = 0; i < country.length; i++) {
+            placeholder[i] = '_';
+        }
+
+        word.innerText = placeholder.join(' ')
+
+    }
+
 
     function resetGame() {
-        // clearInterval(timeVar)
-        // clearInterval(timer)
-        // sec = 20   
+        resetWord()
         clearTimeout(activeTimer) 
         mistakes = 6
         document.getElementById('timer').innerText = sec;
@@ -166,7 +195,7 @@ let timeVar = null
     }
 
     reset.addEventListener('click', function(e) {
-        resetGame() 
+        resetGame()
     })
 
 
@@ -176,8 +205,7 @@ let timeVar = null
 
 // ?
 // reset button for word 
-// reset word
-// reset timer completly
+
 
 
 
