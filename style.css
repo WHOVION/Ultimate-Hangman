@@ -2,9 +2,8 @@
     border: 1px solid red;
     outline: 4px solid black;
 } */
-#hiddenContainer {
+/* #hiddenContainer {
     position: absolute;
-    /* display: flex; */
     height: 300px;
     width: 300px;
     margin-top: 10px;
@@ -47,11 +46,9 @@ h3 {
     font-size: 20px;
 } 
 #timer {
-    /* margin-left: 1370px;  */
     font-size: 70px;
 }  
 .lives {
-    /* margin-left: 1370px; */
     font-size: 40px;
 } 
 .keys {
@@ -73,46 +70,39 @@ h3 {
  .img0 {
     margin-top: 10px;
     height: 350px;
-    /* visibility: hidden; */
 }
  .img1 {
     margin-top: 10px;
     height: 350px;
-    /* display: none; */
 }
  .img2 {
     margin-top: 10px;
     height: 350px;
-    /* display: none; */
 }
  .img3 {
     margin-top: 10px;
     height: 350px;
-    /* display: none; */
 }
  .img4 {
     margin-top: 10px;
     height: 350px;
-    /* display: none; */
 }
  .img5 {
     margin-top: 10px;
     height: 350px;
-    /* display: none; */
 }
  .img6 {
     margin-top: 10px;
     height: 350px;
-    /* display: none; */
 }
  .winner {
     margin-top: 10px;
     height: 350px;
-    /* display: none; */
 }
 
 .hidden {
     display: none;
-}
+} */
+
 
 
