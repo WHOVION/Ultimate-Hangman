@@ -49,6 +49,7 @@ document.getElementById('test0').classList.remove('hidden')
 
     let country = countries[Math.floor(Math.random() * countries.length)]
     console.log(country)
+    // split returns string as an array// makes letter a string
     country = country.split("")
     
 
