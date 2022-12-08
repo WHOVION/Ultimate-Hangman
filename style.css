@@ -27,7 +27,6 @@ h3 {
     height: 250px; 
 }
  #word {
-    /* margin-top: 350px; */
     font-size: 50px;
 } 
  #playersGuess {
@@ -38,36 +37,73 @@ h3 {
     margin-right: 1524px;
     bottom: 100px;
     font-size: 20px;
-    /* 
-    right: 770px; */
 } 
 #timer {
     margin-left: 1370px; 
     font-size: 50px;
-    /* margin-top: 10px;
-    position: relative;
-    float: right; 
-    margin-top: 10px  */
-} 
+}  
 .lives {
     margin-left: 1370px;
-    position: relative;
-    /* float: right;  */
-    /* font-size: 30px;  
-    margin-right: 40px;  */
 } 
 .keys {
     font-size: 40px;;
     height: 50px;
 } 
+.firstRow {
+    display: flex;
+    justify-content: space-around;
+}
 .secondRow {
-    
+    display: flex;
+    justify-content: space-evenly;
 }
 .lastRow {
-    
+    display: flex;
+    justify-content: space-evenly;
+}
+ .img0 {
+    margin-top: 10px;
+    height: 350px;
+    /* visibility: hidden; */
+}
+ .img1 {
+    margin-top: 10px;
+    height: 350px;
+    /* display: none; */
+}
+ .img2 {
+    margin-top: 10px;
+    height: 350px;
+    display: none;
+}
+ .img3 {
+    margin-top: 10px;
+    height: 350px;
+    /* display: none; */
+}
+ .img4 {
+    margin-top: 10px;
+    height: 350px;
+    display: none;
+}
+ .img5 {
+    margin-top: 10px;
+    height: 350px;
+    display: none;
+}
+ .img6 {
+    margin-top: 10px;
+    height: 350px;
+    display: none;
+}
+ .winner {
+    margin-top: 10px;
+    height: 350px;
+    display: none;
 }
 
-clear{
-    all: none;
-} 
+.hidden {
+    display: none;
+}
+
 
