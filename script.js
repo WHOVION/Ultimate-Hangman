@@ -108,11 +108,18 @@ let sec = 20
                     message.innerText = 'YOU NEED TO GO BACK TO GEOGRAPHY CLASS'
                     //disable.keys 
                     clearInterval(timer)
+                    disKey()
                 }
             } if (remainingLetters === 0) {
                     //container.style = clear
                     message.innerText = 'WINNER WINNER CHICKEN DINNER'
                     document.getElementById('test0').classList.add('hidden')
+                    document.getElementById('test1').classList.add('hidden')
+                    document.getElementById('test2').classList.add('hidden')
+                    document.getElementById('test3').classList.add('hidden')
+                    document.getElementById('test4').classList.add('hidden')
+                    document.getElementById('test5').classList.add('hidden')
+                    document.getElementById('test6').classList.add('hidden')
                     document.getElementById('winningPic').classList.remove('hidden')
                     clearInterval(timer)
                     disKey()
@@ -146,19 +153,19 @@ let sec = 20
         sec = 20    
         document.getElementById('timer').innerText = sec;
         document.getElementById('mistakes').innerText = mistakes;
-        // document.querySelectorAll('.hidden').classList('hidden')
-        document.getElementById('test6').classList.add('hidden')
-        document.getElementById('test5').classList.add('hidden')
-        document.getElementById('test4').classList.add('hidden')
-        document.getElementById('test3').classList.add('hidden')
-        document.getElementById('test2').classList.add('hidden')
-        document.getElementById('test1').classList.add('hidden')
+        document.getElementById('test0').classList.remove('hidden')
         document.getElementById('test0').style.display = 'inline-block'
+        document.getElementById('test1').classList.add('hidden')
+        document.getElementById('test2').classList.add('hidden')
+        document.getElementById('test3').classList.add('hidden')
+        document.getElementById('test4').classList.add('hidden')
+        document.getElementById('test5').classList.add('hidden')
+        document.getElementById('test6').classList.add('hidden')
+        document.getElementById('winningPic').classList.add('hidden')
         keys.forEach(key => {
             key.disabled = false
         })
         gameRunning = false
-        console.log('clicked')
     }
 
     reset.addEventListener('click', function(e) {
@@ -172,7 +179,8 @@ let sec = 20
 
 // ?
 // reset button for word 
-// disable buttons when win or lose
+// reset word
+// reset timer completly
 
 
 
