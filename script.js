@@ -43,6 +43,7 @@ let word = document.getElementById('word')
 const timeDisplay = document.querySelector('#timer')
 let mistakes = 6
 let sec = 15
+document.getElementById('test0').classList.remove('hidden')
 
 
 
@@ -106,10 +107,10 @@ let sec = 15
                     document.getElementById('test5').classList.remove('hidden')
                       break;
                     case 0:
-                    
                     document.getElementById('test5').classList.add('hidden')
                     document.getElementById('test6').classList.remove('hidden')
                       break;
+                      //default:(mistakes)
                 }
                 if(mistakes <= 0) {
                     message.innerText = 'YOU NEED TO GO BACK TO GEOGRAPHY CLASS'
@@ -146,6 +147,14 @@ let sec = 15
                 // clearInterval(timer)
                 clearTimeout(activeTimer) 
                 message.innerText = 'YOU NEED TO GO BACK TO GEOGRAPHY CLASS'
+                document.getElementById('test0').classList.add('hidden')
+                document.getElementById('test1').classList.add('hidden')
+                document.getElementById('test2').classList.add('hidden')
+                document.getElementById('test3').classList.add('hidden')
+                document.getElementById('test4').classList.add('hidden')
+                document.getElementById('test5').classList.add('hidden')
+                document.getElementById('winningPic').classList.add('hidden')
+                document.getElementById('test6').classList.remove('hidden')
             }
         }, 1000)
     }
@@ -184,6 +193,7 @@ let sec = 15
         document.getElementById('timer').innerText = sec;
         document.getElementById('mistakes').innerText = mistakes;
         document.getElementById('test0').classList.remove('hidden')
+        document.getElementById('test0').style.display = 'inline-block'
         document.getElementById('test1').classList.add('hidden')
         document.getElementById('test2').classList.add('hidden')
         document.getElementById('test3').classList.add('hidden')
