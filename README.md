@@ -15,8 +15,6 @@
 * Being able to show each body part of the hangman body
 * Having a well done layout using grid or flex
 * Having a set timer running down
-* Making the correct words that are clicked green
-* Making the wrong answers that are clicked red
 * Making sure once the letter is clicked it can't be clicked again
 * Having a functinal 'reset' button
 * Having the letter that was cliked, if right, display on the word line
@@ -26,9 +24,10 @@
 
 ### Stretch Goals
 
+* Making the correct words that are clicked green
+* Making the wrong answers that are clicked red
 * Being able to randomize the alphabet board
 * Potentially being able to display pressure messages
-* Being able to show each body part of the hangman body
 * If player wants to play a thousand times, having enough words to keep game going
 * Having different modes: Extreme mode would make letters move in different boxes(of course keeping the progress they have)
 * Being able to choose different themes-word relevant to it(themes: movies, word: Avengers)
