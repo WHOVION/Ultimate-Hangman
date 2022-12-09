@@ -66,6 +66,10 @@ document.getElementById('test0').classList.remove('hidden')
     let keys = document.querySelectorAll('.keys')
     let gameRunning = false
 
+    // function keyClick() {
+
+  //  }
+
 
     for (let i = 0; i < keys.length; i++) {
         keys[i].addEventListener('click', function(e) {
@@ -190,11 +194,10 @@ document.getElementById('test0').classList.remove('hidden')
         resetWord()
         message.innerText = ''
         clearTimeout(activeTimer) 
-        mistakes = 5
+        mistakes = 6
         document.getElementById('timer').innerText = sec;
         document.getElementById('mistakes').innerText = mistakes;
         document.getElementById('test0').classList.remove('hidden')
-        document.getElementById('test0').style.display = 'inline-block'
         document.getElementById('test1').classList.add('hidden')
         document.getElementById('test2').classList.add('hidden')
         document.getElementById('test3').classList.add('hidden')
