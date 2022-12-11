@@ -9,7 +9,7 @@ let countries = [
     'JAPAN',
     'CROATIA',
     'BRAZIL',
-    'SOUTHKOREA',
+    'SOUTH KOREA',
     'FRANCE',
     'POLAND',
     'ENGLAND',
@@ -23,7 +23,7 @@ let countries = [
     'IRAN',
     'WALES',
     'MEXICO',
-    'SAUDIARABIA',
+    'SAUDI ARABIA',
     'TUNISIA',
     'DENMARK',
     'GERMANY',
@@ -56,7 +56,11 @@ document.getElementById('test0').classList.remove('hidden')
 
     let placeholder = [];
     for (let i = 0; i < country.length; i++) {
-        placeholder[i] = '_';
+        // if (country[i] === ' ') {
+        //     placeholder[i] = ' '
+        // } else {
+            placeholder[i] = '_';
+        //}
     }
 
 
@@ -66,9 +70,6 @@ document.getElementById('test0').classList.remove('hidden')
     let keys = document.querySelectorAll('.keys')
     let gameRunning = false
 
-    // function keyClick() {
-
-  //  }
 
 
     for (let i = 0; i < keys.length; i++) {
