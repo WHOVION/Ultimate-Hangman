@@ -22,15 +22,45 @@ h3 {
     font-size: 20px;
     bottom: 60px;
 }
-#reset {
+
+
+.instructions {
     position: relative;
-    margin-right: 1510px;
-    bottom: 120px;
+    display: inline-block;
+    cursor: pointer;
+    right: 650px;
+    bottom: 170px;
+    font-size: 30px;
+}
+.instructions .popupIns {
+    visibility: hidden;
+    width: 560px;
+    height: 100px;
+    color: black;
+    text-align: center;
+    font-size: 20px;
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 10%;
+    margin-left: -80px;
+}
+.instructions .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+  }
+
+#reset {
+    position: absolute;
     font-size: 25px;
+    bottom: 600px;
+    right: 1500px;
+    z-index: 1;
 }  
 #hiddenContainer {
     position: absolute;
-    height: 300px;
+    height: 230px;
     width: 300px;
     /* margin-top: 10px; */
     bottom: 400px;;

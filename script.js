@@ -45,6 +45,11 @@ let mistakes = 6
 let sec = 15
 document.getElementById('test0').classList.remove('hidden')
 
+    function instructions() {
+        let popup = document.getElementById('insPop');
+        popup.classList.toggle('show');
+    }
+
 
 
     let country = countries[Math.floor(Math.random() * countries.length)]
