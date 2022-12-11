@@ -7,7 +7,7 @@
 
 ### Pitch
 
-* Ultimate Hangman is not your typical hangman game. Ultimate Hangman tests not only your knowledge, but also your Under-Pressured skills as well. Now you may be asking how a simple game like hangman puts you under pressure. Well I'll tell you. In normal hangman, your only goal is to guess the word with a a max-amount of tries. Ultimate Hangman not only has a max amount of tries, but also a TIMER running down once you click a letter. If the timer runs out or you lose all your lives, YOU LOSE. Sounds easy, give it a [TRY](https://whovion.github.io/Ultimate-Hangman/).
+Ultimate Hangman is not your typical hangman game. Ultimate Hangman tests not only your knowledge, but also your Under-Pressured skills as well. Now you may be asking how a simple game like hangman puts you under pressure. Well I'll tell you. In normal hangman, your only goal is to guess the word with a a max-amount of tries. Ultimate Hangman not only has a max amount of tries, but also a TIMER running down once you click a letter. If the timer runs out or you lose all your lives, YOU LOSE. Sounds easy, give it a [TRY](https://whovion.github.io/Ultimate-Hangman/).
 
 ### Tech being used
 

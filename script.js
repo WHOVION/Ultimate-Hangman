@@ -151,6 +151,7 @@ document.getElementById('test0').classList.remove('hidden')
             sec--;
             if (sec < 0) {
                 // clearInterval(timer)
+                disKey()
                 clearTimeout(activeTimer) 
                 message.innerText = 'YOU NEED TO GO BACK TO GEOGRAPHY CLASS'
                 document.getElementById('test0').classList.add('hidden')
